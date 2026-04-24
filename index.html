@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Saw UF unveiled HiPerGator 4.0 in October, 504 Blackwell GPUs, 30x the previous system. The compute story is solved. My bet is the bottleneck now is how 300 AI faculty across 16 colleges organize agent context.">
+<meta name="robots" content="noindex">
+<title>A read on where AI fits in UF's stack, and where it sits above the compute</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for University of Florida &mdash; Emerge Americas 2026</span>
+</div>
+
+
+<!-- === Top institutional bar === -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div><span class="dot"></span><strong>University of Florida</strong> &nbsp;·&nbsp; Research brief prepared for the AI² Academic Initiative Center</div>
+    <div>eMerge Americas 2026 &nbsp;·&nbsp; Booth 785</div>
+  </div>
+</div>
+
+<!-- === Masthead === -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-logo">
+      <img src="logo.png" alt="University of Florida">
+    </div>
+    <div class="masthead-meta">
+      <span class="line"><span class="label">Brief</span> &nbsp; UF-2026-04</span>
+      <span class="line">Building an AI University</span>
+    </div>
+  </div>
+</header>
+
+<!-- === Hero === -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">A methodology read for 300 AI faculty</p>
+      <h1 class="hero-title">A read on where AI fits in UF's stack, <span class="pivot">and where it sits above the compute.</span></h1>
+      <p class="hero-lede">HiPerGator 4.0 solved the compute question. The interesting question is the layer above, the one every research group answers privately and no one writes down.</p>
+    </div>
+
+    <aside class="signal-panel" aria-label="Public signals">
+      <h2>Public signals, FY25 to date</h2>
+      <div class="signal-row"><span class="k">HiPerGator 4.0, Blackwell GPUs</span><span class="v">504</span></div>
+      <div class="signal-row"><span class="k">Research expenditure, FY25</span><span class="v">$1.33B</span></div>
+      <div class="signal-row"><span class="k">AI-focused faculty across 16 colleges</span><span class="v">300+</span></div>
+      <div class="signal-row"><span class="k">Students in AI courses per year</span><span class="v">14,000</span></div>
+      <div class="signal-row"><span class="k">HiPerGator users</span><span class="v">~7,000</span></div>
+      <div class="signal-row"><span class="k">IFAS county extension offices</span><span class="v">67</span></div>
+      <p class="source">Sources: <a href="https://news.ufl.edu/2025/10/hipergator-4-unveiling/" target="_blank" rel="noopener">news.ufl.edu</a>, <a href="https://ai.ufl.edu/about/" target="_blank" rel="noopener">ai.ufl.edu</a></p>
+    </aside>
+  </div>
+</section>
+
+<!-- === Section 01: Thesis === -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Thesis<span class="num">01</span></div>
+    <div>
+      <h2>The compute layer is solved. The curriculum mandate is in motion.</h2>
+      <p class="lead">HiPerGator 4.0 went live with 504 NVIDIA Blackwell GPUs in October. The AI² Center coordinates course development across all 16 colleges. More than 300 AI-focused faculty teach roughly 14,000 students per year.</p>
+      <p>The interesting question now is the one layer up. How do 300 faculty, 7,000 HiPerGator users, and 67 IFAS county extension offices share a methodology for organizing agent context, prompt libraries, and reproducibility artifacts, so that work in one college is legible to work in another.</p>
+      <p>That question is the subject of a paper Jake Van Clief published with the Interpretable Context Methodology group (ACM TiiS, MIT-licensed repo). ICM proposes a layered filesystem for agent context. Every research group organizes context somehow. ICM is an argument for making that structure explicit, inspectable, and portable between labs.</p>
+
+      <div class="layer-stack" role="list" aria-label="ICM layer stack">
+        <div class="layer-row" role="listitem"><div class="tag">L0</div><div class="body"><strong>Identity.</strong> Who the agent is, what mission it is on.</div></div>
+        <div class="layer-row" role="listitem"><div class="tag">L1</div><div class="body"><strong>Orientation.</strong> Institutional context, constraints, vocabulary.</div></div>
+        <div class="layer-row" role="listitem"><div class="tag">L2</div><div class="body"><strong>Contracts.</strong> Stage gates, inputs, outputs, what "done" looks like.</div></div>
+        <div class="layer-row" role="listitem"><div class="tag">L3</div><div class="body"><strong>Reusable factory.</strong> Prompts, templates, patterns shared across projects.</div></div>
+        <div class="layer-row" role="listitem"><div class="tag">L4</div><div class="body"><strong>Working artifacts.</strong> The per-run files. Inputs, outputs, evals, logs.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === Section 02: Ratio === -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Framing<span class="num">02</span></div>
+    <div>
+      <h2>The 60/30/10 view, applied to UF's stack.</h2>
+      <p>Most of what a research group actually builds around an AI workflow is conventional software: file I/O, databases, scheduled jobs, dashboards. In our experience the ratio is roughly:</p>
+
+      <div class="ratio-block" role="list" aria-label="Workflow composition ratio">
+        <div class="ratio-cell" role="listitem">
+          <div class="pct">60<sup>%</sup></div>
+          <div class="cap">Layer one</div>
+          <div class="desc">Traditional code and database work. File I/O, schedulers, pipelines, dashboards.</div>
+        </div>
+        <div class="ratio-cell" role="listitem">
+          <div class="pct">30<sup>%</sup></div>
+          <div class="cap">Layer two</div>
+          <div class="desc">Rule-based logic. Deterministic routing, validation, policy gates, schema checks.</div>
+        </div>
+        <div class="ratio-cell" role="listitem">
+          <div class="pct">10<sup>%</sup></div>
+          <div class="cap">Layer three</div>
+          <div class="desc">Genuine LLM work. The part that benefits from HiPerGator and Blackwell.</div>
+        </div>
+      </div>
+
+      <p>The research leverage comes from putting each piece on the correct layer. When ICM is used as the backbone, the LLM calls, the deterministic logic, and the data-layer code each live where they belong, and reproducibility becomes a property of the directory tree rather than a separate compliance task.</p>
+
+      <blockquote class="pull-quote">
+        A prompt-library pattern developed in UF Health Informatics should be readable by a grad student in IFAS without a translation layer.
+      </blockquote>
+
+      <p>A faculty working group in Engineering should be able to hand a course template to a working group in Journalism, and the template should still parse. That is what a shared filesystem convention delivers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- === Section 03: Precedent === -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Precedent<span class="num">03</span></div>
+    <div>
+      <h2>Research-grade rigor, peer-level engagement, published output.</h2>
+      <p>The closest analog is a research collaboration with the UK and Ireland Computing Education Research (UKICER) community out of Edinburgh, where Jake completed the MSc in Future Governance. The engagement was academic-peer. Methodology workshopped with faculty, adapted to local constraints, outputs published. The same posture is the right one here.</p>
+      <p>A smaller Florida precedent exists at Flagler College: a small-cohort faculty workshop applying the same methodology at a teaching-institution scale. Useful if the first touchpoint at UF is a single department rather than the AI² Center directly.</p>
+      <p>Other contextual proof that informs how we work rather than what we pitch: 1,500+ people trained across enterprise engagements since May 2025 (Pacific Life and Colgate-Palmolive via Correlation One), executive-level cohorts delivered to KPMG UK (Big Four), and a collaboration with the Academy of International Affairs NRW on AI and governance. The Edinburgh and Flagler precedents are the ones we expect to matter in a UF conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- === Section 04: Paper === -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">The paper<span class="num">04</span></div>
+    <div>
+      <h2>Interpretable Context Methodology: folder structure as agent architecture.</h2>
+      <p>Submitted to ACM TiiS. MIT-licensed repo with worked examples, a 52-member practitioner community, and a documented U-shaped edit pattern (most contributor activity at L1 orientation and L4 working artifacts, with a stable middle).</p>
+
+      <ul class="refs">
+        <li>
+          <span class="refs-label">Venue</span>
+          <span class="refs-body">ACM Transactions on Interactive Intelligent Systems (TiiS). Submitted.</span>
+        </li>
+        <li>
+          <span class="refs-label">Repository</span>
+          <span class="refs-body"><a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">github.com/RinDig/Interpretable-Context-Methodology-ICM-</a> (MIT license)</span>
+        </li>
+        <li>
+          <span class="refs-label">Related</span>
+          <span class="refs-body">Microservice Workflow Patterns, a companion paper on distributed agent architectures. Co-authored in the ICM thread.</span>
+        </li>
+        <li>
+          <span class="refs-label">Adjacent work</span>
+          <span class="refs-body">Ethics Engine, a psychometric assessment tool for evaluating ideological and moral patterns in LLMs. <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arxiv.org/abs/2510.11742</a> and <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>. Relevant to UF's "Ethics, Data, and Technology" requirement if the conversation goes that direction.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- === Section 05: Engagement === -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">First step<span class="num">05</span></div>
+    <div>
+      <h2>What a first engagement looks like.</h2>
+      <p>A half-day methodology workshop with the AI² Center or a single college. UF Health Informatics, IFAS, and CISE are the strongest first-fit venues, based on the maturity of their internal agent work and the density of applied AI projects.</p>
+
+      <div class="engagement">
+        <h3>Half-day workshop, scoped sprint</h3>
+        <ul>
+          <li><span class="idx">01</span><span>ICM walkthrough with faculty participants, layered by research context and course context.</span></li>
+          <li><span class="idx">02</span><span>Two worked examples against UF-native stacks (HiPerGator job layout, a UF Health-style clinical agent shell).</span></li>
+          <li><span class="idx">03</span><span>Starter repo each participant takes home. MIT license, ready to fork into a lab or a course.</span></li>
+          <li><span class="idx">04</span><span>Short evaluation note after the session, mapped to the AI Blue Sky Task Force recommendations.</span></li>
+          <li><span class="idx">05</span><span>If the methodology fits, the second engagement is a cross-college working session.</span></li>
+        </ul>
+      </div>
+
+      <p style="margin-top:28px;">For any production ML pipeline work that sits below the orchestration and methodology layer, Eduba partners with NLP Logix. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists, with UF Health Jacksonville in their immediate geography.</p>
+    </div>
+  </div>
+</section>
+
+<!-- === CTA === -->
+<section class="cta" id="next">
+  <div class="cta-inner">
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Thirty minutes on the calendar. Bring one workflow that keeps a lab reinventing the filesystem.</h2>
+      <p>The purpose of the call is a two-way read. We share how ICM has played at Edinburgh and inside enterprise cohorts, and you share where a shared methodology would actually save a research group time in the next grant cycle.</p>
+      <p class="who">At Booth 785 through the conference.</p>
+    </div>
+
+    <div class="cta-card">
+      <div class="label">Book the call</div>
+      <div class="name">Matt Creamer</div>
+      <p class="role">Chief Revenue Officer, Eduba</p>
+      <a class="btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Reserve 30 minutes <span class="arrow">→</span></a>
+      <p class="small"><a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a></p>
+      <p class="booth">Booth 785 · eMerge Americas 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- === Footer === -->
+<footer>
+  <div class="footer-inner">
+    <p class="prep">Prepared by Eduba: <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></p>
+    <p>A single-use brief for the University of Florida AI² Academic Initiative Center. Public sources only.</p>
+  </div>
+</footer>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by University of Florida.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
